@@ -14,8 +14,8 @@ Input: `docs/idea.md` (the user's whole idea, any shape). Output: `docs/mvp.md`,
 
 ## 1. Read the idea
 
-Read `docs/idea.md` in full. If it is missing, copy the idea template from the Base & Build
-`templates/docs/idea.md` (or ask the user to describe the idea) and stop until it is filled.
+Read `docs/idea.md` in full. If it is missing, recreate it from the template's
+`docs/idea.md` sections (or ask the user to describe the idea) and stop until it is filled.
 
 List every feature the idea mentions, explicit or implied, as one line each. Done when every
 sentence of the idea maps to a feature or to context.

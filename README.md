@@ -1,13 +1,12 @@
-# xFactory
+# XFactory
 
-A starter for building template for building a product with AI and skills: **a working MVP first,
-then one feature at a time, each designed as a mockup before any code is written.**
+A starter template for building a product with AI and skills **as working MVP first, then one feature at a time, each designed as a mockup before any code is written.**
 
-![Base & Build flow: Idea, Working MVP, Mockup, Iterate, AI builds it, Ship on the MVP](base-and-build-flow.png)
+![XFactory flow: Idea, Working MVP, Mockup, Iterate, AI builds it, Ship on the MVP](x-factory-flow.png)
 
 ## Why this works
 
-- **A working base before anything else.** Nowadays Asking AI to build a whole product in one go
+- **A working base before anything else.** Asking AI to build a whole product in one go
 leaves features half working. A small MVP that runs end to end on real data gives every
 later feature a real product to land on.
 - **Iterate on documents, not code.** Design changes happen on a `.md` + `.html` mockup,
@@ -18,13 +17,17 @@ where they cost minutes and few tokens. Code is written once, from an approved m
 ## What's in the template
 
 ```
-build-template/
+x-factory/
 ├── AGENTS.md                     project rules for Claude: fill in stack and scripts
+├── x-factory-flow.png       the flow diagram above
 ├── docs/
 │   └── idea.md                   your whole idea: fill this in first
 └── .claude/skills/
+    ├── README.md                 index of the three skills
     ├── define-mvp/               /define-mvp: idea.md → docs/mvp.md
+    │   └── assets/mvp.template.md
     ├── feature-mockup/           /feature-mockup: feature → .md + .html mockup
+    │   └── assets/               PROFILE.template.md, mockup-frame.html
     └── build-from-mockup/        /build-from-mockup: approved mockup → working feature
 ```
 
@@ -33,8 +36,9 @@ build-template/
 | -------------------------------------------------------- | ----------------------------- | -------------------------------------- |
 | `docs/idea.md`                                           | You                           | Before anything else                   |
 | `AGENTS.md`                                              | You                           | Once you pick the stack                |
-| `docs/mvp.md`                                            | `/define-mvp`                 | Step 1–2, you iterate and approve      |
+| `docs/mvp.md`                                            | `/define-mvp`                 | Step 2, you iterate and approve        |
 | `docs/design-docs/mockups/PROFILE.md`                    | `/feature-mockup` (first run) | Once, then kept current                |
+| `docs/design-docs/mockups/README.md`                     | `/feature-mockup`             | One row per mockup, status kept current |
 | `docs/design-docs/mockups/<date>-<feature>.md` + `.html` | `/feature-mockup`             | Every feature, you iterate and approve |
 | `docs/plans/<date>-<feature>.md`                         | `/build-from-mockup`          | Every feature                          |
 
@@ -48,7 +52,7 @@ build-template/
 ### 1. Start the project
 
 ```bash
-npx degit emadgh-deriv/progressive-build-template <your-project>
+npx degit deriv-com/x-factory <your-project>
 ```
 
 Then in the project:

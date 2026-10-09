@@ -1,4 +1,4 @@
-# Idea: xFactory
+# Idea: PRODUCT NAME
 Write freely. Nothing here is a commitment; `/define-mvp` reads this and cuts the MVP from it.
 
 ## What is it?
