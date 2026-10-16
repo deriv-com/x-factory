@@ -6,7 +6,17 @@ approved mockup. Docs live in `docs/`: `idea.md`, `mvp.md`, `design-docs/mockups
 ## Flow
 1. `/define-mvp` turns `docs/idea.md` into `docs/mvp.md`. Approve before mocking up.
 2. `/feature-mockup <feature>` writes a `.md` + `.html` mockup. Iterate on those files until approved.
+   `/feature-mockup-variants <feature> [2|3]` writes 2–3 alternatives to compare; the picked one
+   becomes the mockup pair.
 3. `/build-from-mockup <feature>` builds one approved mockup and verifies it.
+
+Council mode: `/council-define-mvp`, `/council-feature-mockup`, `/council-feature-mockup-variants`, `/council-build-from-mockup` run
+the same steps as a discussion between persona agents (`.claude/agents/`, protocol in
+`.claude/council/PROTOCOL.md`); transcripts go to `docs/councils/`.
+
+Automation: `/run-pipeline` drives the whole flow (solo or council), tracks it in
+`docs/pipeline.md`, and the `process-guardian` agent audits every gate. Approvals stay with
+the user unless they explicitly turn on autopilot.
 
 ## Stack
 - Language / framework:

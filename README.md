@@ -28,7 +28,11 @@ x-factory/
     │   └── assets/mvp.template.md
     ├── feature-mockup/           /feature-mockup: feature → .md + .html mockup
     │   └── assets/               PROFILE.template.md, mockup-frame.html
-    └── build-from-mockup/        /build-from-mockup: approved mockup → working feature
+    ├── build-from-mockup/        /build-from-mockup: approved mockup → working feature
+    ├── council-*/                same three steps, debated by persona agents
+    └── run-pipeline/             /run-pipeline: drives the whole flow, tracks docs/pipeline.md
+.claude/agents/                   council personas + process-guardian
+.claude/council/PROTOCOL.md       how a council discussion runs
 ```
 
 
@@ -103,6 +107,14 @@ every mockup frame. Test the core flow yourself on real data, then commit.
 ```
 
 Then take the next item from the backlog in `docs/mvp.md`.
+
+### Council mode and automation
+
+Prefix any step with `council-` (`/council-define-mvp`, `/council-feature-mockup <feature>`,
+`/council-build-from-mockup <feature>`) to have persona agents (strategist, skeptic, data
+engineer, user advocate, designer, architect, QA) propose, critique and converge before the
+output is written. Or run `/run-pipeline` to have Claude drive every step in order, solo or
+council, stopping at each approval (or not, if you say "autopilot on").
 
 ## Rules that keep it working
 
